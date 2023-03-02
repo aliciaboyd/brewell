@@ -1,9 +1,7 @@
 const nav = document.querySelector(".main-nav");
 const menuList = document.querySelector(".main-nav ul");
 const menuBtn = document.querySelector("#nav-btn");
-const hero = document.querySelector(".hero");
-const hero_height = hero.offsetHeight * .8;
-let scrollPosition = window.scrollY;
+const hero_height = document.querySelector(".hero").offsetHeight * .8;
 
 window.onscroll = () => {
   let scrollPosition = window.scrollY;
@@ -15,8 +13,6 @@ window.onscroll = () => {
   }
 }
 
-menuBtn.addEventListener("click", showMenu);
-
-function showMenu() {
+menuBtn.addEventListener("click", () => {
   menuList.classList.toggle("active");
-}
+})
