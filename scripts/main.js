@@ -1,5 +1,6 @@
 const nav = document.querySelector(".main-nav");
 const menuList = document.querySelector(".main-nav ul");
+const menuItems = document.querySelectorAll(".main-nav a");
 const menuBtn = document.querySelector("#nav-btn");
 const hero_height = document.querySelector(".hero").offsetHeight * .8;
 
@@ -16,3 +17,8 @@ window.onscroll = () => {
 menuBtn.addEventListener("click", () => {
   menuList.classList.toggle("active");
 })
+
+menuList.addEventListener("click", ()=> {
+    menuList.classList.toggle("active");
+  }
+)
